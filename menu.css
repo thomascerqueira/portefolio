@@ -1,0 +1,18 @@
+.menu {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: hsla(0, 100%, 50%, 0.6);
+  padding: var(--menu-height) 0;
+}
+
+.menu a {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+}
