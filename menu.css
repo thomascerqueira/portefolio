@@ -4,15 +4,79 @@
   top: 0;
   left: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  background-color: hsla(0, 100%, 50%, 0.6);
+  background-color: var(--dark);
   padding: var(--menu-height) 0;
 }
 
 .menu a {
-  background-color: white;
   text-decoration: none;
   color: black;
+
+  font-weight: var(--bold);
+  font-size: var(--menu);
+
+  padding: 0.7em;
+  border-radius: 20px;
+}
+
+.menu a:hover {
+ transform: scale(1.2);
+ border-radius: 10px;
+}
+
+.menu-content > * {
+  transition: all 500ms;
+}
+
+.menu-content {
+  background-color: hsla(100, 50%, 50%, 0.4);
+  width: 100%;
+  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2em;
+  margin-right: min(4em, 3vw);
+}
+
+.menu > .title {
+  padding: 0.5em;
+  font-size: var(--title);
+  margin-left: min(4em, 3vw);
+  background-color: hsla(120, 100%, 50%, 0.6);
+}
+
+
+.menu-content .menu-open {
+  color: hsla(200, 100%, 50%, 0.6);
+  transform: scale(1.2);
+}
+
+@media (max-width: 750px) {
+  .menu a {
+    font-size: var(--menu-phone);
+  }
+
+  .menu-content {
+    gap: 1em;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .menu {
+    justify-content: center;
+  }
+
+  .menu > .title {
+    margin: 0;
+  }
+
+  .menu-content {
+    display: none;
+    width: 0;
+  }
 }

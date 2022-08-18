@@ -8,10 +8,18 @@ let options = {
 const callback = (entries, observer) => {
   entries.forEach((entry) => {
     const { target } = entry;
+    const menu = $(`#menu-${target.id}`).get(0)
 
     if (entry.intersectionRatio >= 0.75) {
+      
+      if (menu) {
+        menu.classList.add("menu-open")
+      }
       target.classList.add("is-visible");
     } else {
+      if (menu) {
+        menu.classList.remove("menu-open")
+      }
       target.classList.remove("is-visible");
     }
   });

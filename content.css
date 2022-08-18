@@ -1,6 +1,6 @@
 .content {
     z-index: 1;
-    --margin-content: calc(var(--menu-height) + var(--menu-height) + 1em);
+    --margin-content: calc(var(--menu-height) + var(--menu-height) + var(--padding-button) + var(--padding-button) + 2em);
 
     margin-top: var(--margin-content);
     height: calc(100vh - var(--margin-content));
@@ -47,4 +47,8 @@
 
 .content section:nth-child(3) {
     background-color: hsl(100, 100%, 70%, 0.4);
+}
+
+.content section:nth-child(3) {
+    background-color: hsl(250, 100%, 70%, 0.4);
 }
