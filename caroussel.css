@@ -1,0 +1,113 @@
+.caroussel {
+    overflow: hidden;
+    background-color: hsla(250, 50%, 50%, 0.5);
+
+    --prev: translate3d(-70%, -10%, 0);
+    --active: translate3d(-50%, 40%, 0);
+    --next: translate3d(-70%, 150%, 0);
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    isolation: isolate;
+}
+
+.caroussel-item {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 60%;
+    position: inherit;
+    background-color: transparent;
+    gap: 1em;
+    transform: scale(0.7);
+    z-index: 0;
+
+    transition: all 500ms;
+    opacity: 0;
+
+    background-color: hsla(0, 70%, 0%, 0.7);
+}
+
+.caroussel-item > span {
+    height: 90%;
+    border-radius: 20px;
+    width: 80%;
+    padding: 0.5em;
+    background-color: hsla(100, 50%, 50%, 1);
+    font-size: var(--normal);
+}
+
+.caroussel-item.active {
+    opacity: 1;
+    transform: scale(1)
+                var(--active);
+    z-index: 1;
+}
+
+.caroussel-item.active > span {
+    transition: all 500ms;
+}
+
+.caroussel-item.prev {
+    opacity: 0.7;
+    transform: scale(0.7) 
+            var(--prev);
+    z-index: 0;
+}
+
+.caroussel-item.next {
+    opacity: 0.7;
+    transform: scale(0.7) 
+            var(--next);
+    z-index: 0;
+}
+
+
+.caroussel-item > img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+
+@media (min-width: 768px) {
+    .caroussel {
+        --prev: translate3d(-40%, -80%, 0);
+        --active: translate3d(10%, -60%, 0);
+        --next: translate3d(50%, -80%, 0);
+    }
+
+    .caroussel-item.next {
+        transform-origin: right center;
+    }
+
+    .caroussel-item {
+        height: 70%;
+        left: 0;
+        top: 50%;
+    }
+
+    .caroussel-item > img {
+        height: 70%;
+    }
+
+    .caroussel-item > span {
+        text-align: center;
+        height: 100%;
+        max-width: auto;
+    }
+}

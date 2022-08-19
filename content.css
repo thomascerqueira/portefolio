@@ -13,14 +13,18 @@
 .section {
     scroll-snap-align: start;
 
-    display: inline-block;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
     height: 100vh;
 }
 
 .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     height: 100%;
-    padding: 10em min(10em, 15vw)
+    width: 100%;
 }
 
 .section-content > * {
@@ -51,4 +55,16 @@
 
 .content section:nth-child(3) {
     background-color: hsl(250, 100%, 70%, 0.4);
+}
+
+@media (min-width: 768px) {
+    .section-content {
+        align-items: flex-start;
+    }
+
+    .section-content > h1 {
+        margin-left: 1em;
+        font-size: var(--title);
+        font-weight: var(--black);
+    }
 }
