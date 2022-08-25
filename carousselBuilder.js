@@ -13,7 +13,7 @@ const websiteItems = [
     }
 ]
 
-const website = $("#website > div > div > .caroussel").get(0)
+const website = $("#website > .section-content > .container > .caroussel").get(0)
 const template = $("#template-item").get(0)
 
 

@@ -1,17 +1,19 @@
 <!-- https://huemint.com/website-3/#palette=100c0f-290c18-eefbfd-32c1eb-f8bf40-ef357a -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>je suis le</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
+    <script src="https://kit.fontawesome.com/f2f292ce78.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
     <link rel="stylesheet" type="text/css" href="content.css">
@@ -19,7 +21,9 @@
 
     <script src="carousselBuilder.js" defer></script>
     <script src="test.js" defer></script>
+    <script src="carousselHandler.js" defer></script>
 </head>
+
 <body>
     <nav class="menu">
         <div class="title">
@@ -29,7 +33,7 @@
             <!-- <a href="#about" id="menu-about">About</a> -->
             <a href="#website" id="menu-website">Website</a>
             <a href="#mobile" id="menu-mobile">Mobile</a>
-            <a href="#game" id="menu-game">Game</a>    
+            <a href="#game" id="menu-game">Game</a>
         </div>
     </nav>
     <main>
@@ -45,7 +49,16 @@
                     <h1>Website</h1>
                     <div class="container">
                         <div class="caroussel">
-
+                            <div class="arrow container-top">
+                                <div>
+                                    <div class="fa-solid fa-arrow-left fa-2xl a-prev"></div>
+                                </div>
+                            </div>
+                            <div class="arrow container-bottom">
+                                <div>
+                                    <div class="fa-solid fa-arrow-left fa-2xl a-next"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,18 +66,44 @@
             <section id="mobile" class="section section-mobile">
                 <div class="section-content">
                     <h1>mobile</h1>
-                    <h1>Test</h1>
+                    <div class="container">
+                        <div class="caroussel">
+                            <div class="arrow container-top">
+                                <div>
+                                    <div class="fa-solid fa-arrow-left fa-2xl a-prev"></div>
+                                </div>
+                            </div>
+                            <div class="arrow container-bottom">
+                                <div>
+                                    <div class="fa-solid fa-arrow-left fa-2xl a-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="game" class="section section-game">
                 <div class="section-content">
                     <h1>game</h1>
-                    <h1>Test</h1>
+                    <div class="container">
+                        <div class="caroussel">
+                            <div class="arrow container-top">
+                                <div>
+                                    <div class="fa-solid fa-arrow-left fa-2xl a-prev"></div>
+                                </div>
+                            </div>
+                            <div class="arrow container-bottom">
+                                <div>
+                                    <div class="fa-solid fa-arrow-left fa-2xl a-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
     </main>
-    
+
     <template id="template-item">
         <div class="caroussel-item">
             <img class="ci-img"></img>
