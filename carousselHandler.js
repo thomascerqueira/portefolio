@@ -3,9 +3,6 @@ const carousselBottoms = $(".arrow.container-bottom")
 
 const itemWebsites = $("#website > .section-content > .container > .caroussel > .caroussel-item")
 
-
-console.log(itemWebsites)
-
 let state = {
     website: 0,
     mobile: 0,
@@ -17,10 +14,11 @@ function changeState(items, direction, where) {
         state[where] = 0
     } else if (state[where] + direction < 0) {
         state[where] = items.length - 1
+    } else {
+        state[where] = state[where] + direction
     }
 
     const value = state[where]
-    console.log(value)
     items.toArray().forEach((item, index) => item.classList.remove("active", "next", "prev"))
 
     if (value + 1 >= items.length) {
@@ -38,11 +36,11 @@ function changeState(items, direction, where) {
 }
 
 carousselTops.get(0)?.addEventListener("click", function(e) {
-    changeState(itemWebsites, 1, "website")
+    changeState(itemWebsites, -1, "website")
 })
 
 carousselBottoms.get(0)?.addEventListener("click", function(e) {
-    changeState(itemWebsites, -1, "website")
+    changeState(itemWebsites, 1, "website")
 })
 
 

@@ -16,25 +16,23 @@
     left: 0;
     width: 100%;
     height: 100%;
-    transform-style: preserve-3d;
-    perspective: 2000px;
     isolation: isolate;
 }
 
 /* Caroussel items */
 
 .caroussel-item {
-    position: absolute;
     top: -10%;
     left: 50%;
 
     display: flex;
     align-items: center;
+    justify-content: center;
+
     flex-direction: column;
     width: 80%;
     height: 60%;
     position: inherit;
-    background-color: transparent;
     gap: 1em;
     transform: scale(0.7);
     z-index: 0;
@@ -46,45 +44,61 @@
     background-color: hsla(0, 70%, 0%, 0.2);
 }
 
-.caroussel-item > span {
+/*
+    active
+    prev
+    next
+*/
+.caroussel-item.active {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1)
+                var(--active);
+}
+
+.caroussel-item.prev {
+    opacity: 0.7;
+    transform: scale(0.7)
+            var(--prev);
+}
+
+.caroussel-item.next {
+    opacity: 0.7;
+    transform: scale(0.7)
+            var(--next);
+}
+
+
+/*
+    Img container
+*/
+.caroussel-item > .ci-img-container {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+
+.caroussel-item > .ci-img-container > img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+/*
+    Text container
+*/
+.caroussel-item > .ci-text-container {
     height: 90%;
     border-radius: 20px;
-    width: 80%;
+    width: 100%;
     padding: 0.5em;
     background-color: hsla(100, 50%, 50%, 1);
     font-size: var(--normal);
 }
 
-.caroussel-item.active {
-    opacity: 1;
-    transform: scale(1)
-                var(--active);
-    z-index: 1;
-}
-
-.caroussel-item.active > span {
+.caroussel-item.active > .ci-text-container > * {
     transition: all 500ms;
-}
-
-.caroussel-item.prev {
-    opacity: 0.7;
-    transform: scale(0.7) 
-            var(--prev);
-    z-index: 0;
-}
-
-.caroussel-item.next {
-    opacity: 0.7;
-    transform: scale(0.7) 
-            var(--next);
-    z-index: 0;
-}
-
-
-.caroussel-item > img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
 }
 
 
@@ -118,14 +132,14 @@
 
 .arrow.container-bottom .a-next {
     position: absolute;
-    bottom: 10%;
+    bottom: 20%;
     transform: rotate(-90deg);
 }
 
 @media (min-width: 768px) {
     .caroussel {
         --prev: translate3d(-40%, -80%, 0);
-        --active: translate3d(10%, -60%, 0);
+        --active: translate3d(15%, -60%, 0);
         --next: translate3d(50%, -80%, 0);
     }
 
@@ -134,24 +148,31 @@
     }
 
     .caroussel-item {
+        padding: 0.5em;
+        flex-direction: row;
         height: 70%;
         left: 0;
         top: 50%;
     }
 
-    .caroussel-item > img {
-        height: 70%;
+    .caroussel-item > .ci-img-container {
+        height: 90%;
+        width: 50%;
     }
 
-    .caroussel-item > span {
+    .caroussel-item > .ci-text-container {
+        padding: 1em;
         text-align: center;
-        height: 100%;
-        max-width: auto;
+        height: 80%;
+        max-width: 50%;
     }
 
+
+    /*
+        Arrow
+    */
     .arrow {
         justify-content: start;
-        /* align-items: center; */
         width: 50%;
         height: 100%;
     }
