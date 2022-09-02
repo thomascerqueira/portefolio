@@ -1,0 +1,22 @@
+/*
+  Icons
+*/
+
+.icons {
+    display: flex;
+    gap: 1em;
+}
+
+.icons >* {
+    transition: all 500ms;
+}
+
+.icon {
+    color: hsla(var(--red), 0.6);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}

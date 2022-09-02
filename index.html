@@ -12,12 +12,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/f2f292ce78.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="menu.css">
     <link rel="stylesheet" type="text/css" href="content.css">
     <link rel="stylesheet" type="text/css" href="caroussel.css">
+    <link rel="stylesheet" type="text/css" href="icons.css">
 
     <script src="carousselBuilder.js" defer></script>
     <script src="test.js" defer></script>
@@ -30,20 +36,43 @@
             Thomas
         </div>
         <div class="menu-content">
-            <!-- <a href="#about" id="menu-about">About</a> -->
-            <a href="#website" id="menu-website">Website</a>
-            <a href="#mobile" id="menu-mobile">Mobile</a>
-            <a href="#game" id="menu-game">Game</a>
+            <a href="#about" id="menu-about">
+                <i class="fa-solid fa-person"></i>
+                <div>
+                    About
+                </div>
+            </a>
+            <a href="#website" id="menu-website">
+                <i class="fa-solid fa-globe"></i>
+                <div>
+                    Website
+                </div>
+            </a>
+            <a href="#mobile" id="menu-mobile">
+                <i class="fa-solid fa-mobile"></i>
+                <div>
+                    Mobile
+                </div>
+            </a>
+            <a href="#game" id="menu-game">
+                <i class="fa-solid fa-gamepad"></i>
+                <div>
+                    Game
+                </div>
+            </a>
         </div>
     </nav>
     <main>
         <div class="content">
-            <!-- <section id="about" class="section section-website">
+            <section id="about" class="section section-website">
                 <div class="section-content">
                     <h1>About</h1>
-                    <h1>TEXT</h1>
+                    <div class="icons">
+                        <i class="fa-brands fa-github fa-8x icon" onclick="window.open('https://github.com/thomascerqueira')"></i>
+                        <i class="fa-brands fa-linkedin fa-8x icon" onclick="window.open('https://www.linkedin.com/in/thomas-cerqueira/')"></i>
+                    </div>
                 </div>
-            </section> -->
+            </section>
             <section id="website" class="section section-website">
                 <div class="section-content">
                     <h1>Website</h1>
@@ -111,9 +140,9 @@
             </div>
             <div class="ci-text-container">
                 <h2 class="ci-title"></h2>
-                <span class="ci-span"></span>
+                <div class="ci-span"></div>
+                <div class="ci-icon"></div>
             </div>
-
         </div>
     </template>
 </body>

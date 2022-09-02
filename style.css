@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   --regular: 400;
   --medium: 500;
   --bold: 700;
@@ -13,10 +13,26 @@
 
   --title-phone: 22px;
   --menu-phone: 18px;
+  --normal-phone: 14px;
 
   --padding-button: 0.75em;
 
-  --dark: hsla(315, 14%, 5%, 0.4);
+  --dark: 315, 14%, 5%;
+  --red: 360, 97%, 63%;
+  --cyan: 177, 84%, 59%;
+  --blue-dark: 187, 52%, 30%;
+  --blue-lighter: 185, 96%, 89%;
+
+  --blue-light: 205, 50%, 50%;
+  --blue-caroussel: 205, 73%, 76%;
+
+  --website-color: 177, 84%, 10%;
+
+}
+
+h1 {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
