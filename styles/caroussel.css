@@ -112,6 +112,13 @@
 
 /* Icon container */
 
+.ci-icon {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 1em;
+}
+
 .ci-icon > i {
     color: hsla(var(--red), 0.8);
     cursor: pointer;

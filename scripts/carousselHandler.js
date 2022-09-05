@@ -1,7 +1,8 @@
 const carousselTops = $(".arrow.container-top")
 const carousselBottoms = $(".arrow.container-bottom")
 
-const itemWebsites = $("#website > .section-content > .container > .caroussel > .caroussel-item")
+const itemsWebsite = $("#website > .section-content > .container > .caroussel > .caroussel-item")
+const itemsMobile = $("#mobile > .section-content > .container > .caroussel > .caroussel-item")
 
 let state = {
     website: 0,
@@ -36,20 +37,20 @@ function changeState(items, direction, where) {
 }
 
 carousselTops.get(0)?.addEventListener("click", function(e) {
-    changeState(itemWebsites, -1, "website")
+    changeState(itemsWebsite, -1, "website")
 })
 
 carousselBottoms.get(0)?.addEventListener("click", function(e) {
-    changeState(itemWebsites, 1, "website")
+    changeState(itemsWebsite, 1, "website")
 })
 
 
 carousselTops.get(1)?.addEventListener("click", function(e) {
-    console.log("Je vais vers le top 1")
+    changeState(itemsMobile, -1, "website")
 })
 
 carousselBottoms.get(1)?.addEventListener("click", function(e) {
-    console.log("Je vais vers le bottom 1")
+    changeState(itemsMobile, 1, "website")
 })
 
 
