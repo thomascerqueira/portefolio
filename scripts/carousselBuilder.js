@@ -101,33 +101,75 @@ Connexion et base de donnée sur [].",
         ],
     },
     {
-        title: "Area",
-        img: "public/area_mobile.png",
-        text: "Version mobile du projet Area, Fait en flutter, il reproduis de façon simplifier les fonctionnalitées d'area web",
+        title: "Freshen",
+        img: "public/Freshen.png",
+        text: "Projet [] pour la fin d'Epitech en []. C'est une application qui vise à améliorer [] et \
+[] des [] et du monde du seconde main.",
         special: [
-            "3ème année d'Epitech",
-            "React",
-            "action/reaction",
-            "webhooks",
-            "Oauth2",
-            "back",
-            "front"
+            "innovation",
+            "2024",
+            "la visibilité",
+            "l'accessibilité",
+            "friperies"
         ],
         icons: [
             {
-                url: "https://github.com/thomascerqueira/area-server",
-                icon: "fa-solid fa-server fa-2x"
-            },
-            {
-                url: "https://github.com/thomascerqueira/Area_web",
+                url: "https://freshen.fr/",
                 icon: "fa-solid fa-globe fa-2x"
             }
         ]
     },
 ]
 
+const gameItems = [
+    {
+        title: "The unknown traveler",
+        img: "public/the_unknown_traveler.jpg",
+        text: "Jeux issue d'une [] sur [].\nInspiré du jeux [], le but est d'envoyer des espions à leur destination tout en \
+leur donnant [] pour réussir leur mission.",
+        special: [
+            "GameJam",
+            "Unity",
+            "Paper Please",
+            "les bons faux papiers",
+        ],
+    },
+    {
+        title: "Escape",
+        img: "public/Escape.jpg",
+        text: "Jeux issue d'une [] sur [].\nC'est un [] dans lequel le joueur doit s'échapper de prison. Pour cela \
+il peut changer entre [] afin de résoudre les différentes [].\nLes assets sont tirées du jeux [].",
+        special: [
+            "GameJam",
+            "Unity",
+            "jeux de puzzle",
+            "deux personnages",
+            "enigmes",
+            "Prison Architect"
+        ],
+    },
+    {
+        title: "Monkey",
+        img: "public/Monkey.jpg",
+        text: "Jeux issue d'une [], développer sur [].\nInspiré de différents jeux comme [] ou bien [], \
+c'est plus une [] qu'un jeux car c'était notre [] en [].\nIl n'y a pas vraiment de but à part suivre \
+(ou pas) les [].",
+        special: [
+            "GameJam",
+            "Unity",
+            "The Stanley Parable",
+            "antichamber",
+            "démo technique",
+            "premier jeux",
+            "3D",
+            "ordres du narateur"
+        ],
+    },
+]
+
 const website = $("#website > .section-content > .container > .caroussel").get(0)
 const mobile = $("#mobile > .section-content > .container > .caroussel").get(0)
+const game = $("#game > .section-content > .container > .caroussel").get(0)
 const template = $("#template-item").get(0)
 
 function addItems(item, index, where, totalLength) {
@@ -152,8 +194,7 @@ function addItems(item, index, where, totalLength) {
         if (special && special[i]) {
             const spanS = document.createElement("span")
             spanS.textContent = special[i]
-            spanS.style.fontWeight = 800
-            spanS.style.color = "hsla(var(--red), 0.8)"
+            spanS.classList = ["highlight"]
             div_text.appendChild(spanS)
         }
     }
@@ -188,4 +229,8 @@ websiteItems.forEach((item, index) => {
 
 mobileItems.forEach((item, index) => {
     addItems(item, index, mobile, mobileItems.length)
+})
+
+gameItems.forEach((item, index) => {
+    addItems(item, index, game, gameItems.length)
 })

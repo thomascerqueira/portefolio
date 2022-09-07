@@ -7,7 +7,7 @@
   --bold: 700;
   --black: 900;
 
-  --title: 27px;
+  --title: 35px;
   --menu: 22px;
   --normal: 18px;
 
@@ -56,3 +56,13 @@ body {
   display: none;
 }
 
+.highlight {
+  font-weight: 800;
+  color: hsla(var(--red), 0.8);
+}
+
+@media (max-width: 960px) {
+  :root {
+    --menu-height: 1px;
+  }
+}
