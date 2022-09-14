@@ -102,15 +102,17 @@ Connexion et base de donnée sur [].",
     },
     {
         title: "Freshen",
-        img: "public/Freshen.png",
+        img: "public/freshen.png",
         text: "Projet [] pour la fin d'Epitech en []. C'est une application qui vise à améliorer [] et \
-[] des [] et du monde du seconde main.",
+[] des [] et du monde du seconde main.\nJe travail principalement sur le back qui est fait en [], avec [] et un mode de connexion personnalisé.",
         special: [
             "innovation",
             "2024",
             "la visibilité",
             "l'accessibilité",
-            "friperies"
+            "friperies",
+            "NodeTS",
+            "MongoDB"
         ],
         icons: [
             {
