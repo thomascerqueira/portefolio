@@ -12,8 +12,8 @@ que le photographe puisse [] et [] un uid directement au client pour ne pas avoi
         ],
         icons: [
             {
-                url: "https://www.youtube.com/",
-                icon: "fa-solid fa-globe fa-2x"
+                url: "https://github.com/thomascerqueira/Elliot_Website_public",
+                icon: "fa-brands fa-github fa-2x"
             }
         ],
         title: "Elliot website"
