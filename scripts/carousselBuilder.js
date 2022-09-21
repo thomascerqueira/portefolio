@@ -12,8 +12,8 @@ que le photographe puisse [] et [] un uid directement au client pour ne pas avoi
         ],
         icons: [
             {
-                url: "https://www.youtube.com/",
-                icon: "fa-solid fa-globe fa-2x"
+                url: "https://github.com/thomascerqueira/Elliot_Website_public",
+                icon: "fa-brands fa-github fa-2x"
             }
         ],
         title: "Elliot website"
@@ -102,15 +102,17 @@ Connexion et base de donnée sur [].",
     },
     {
         title: "Freshen",
-        img: "public/Freshen.png",
+        img: "public/freshen.png",
         text: "Projet [] pour la fin d'Epitech en []. C'est une application qui vise à améliorer [] et \
-[] des [] et du monde du seconde main.",
+[] des [] et du monde du seconde main.\nJe travail principalement sur le back qui est fait en [], avec [] et un mode de connexion personnalisé.",
         special: [
             "innovation",
             "2024",
             "la visibilité",
             "l'accessibilité",
-            "friperies"
+            "friperies",
+            "NodeTS",
+            "MongoDB"
         ],
         icons: [
             {
