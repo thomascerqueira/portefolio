@@ -21,7 +21,7 @@ que le photographe puisse [] et [] un uid directement au client pour ne pas avoi
     {
         img: "public/Pony.png",
         text: "Site en [] qui est destiné à être dans un [].\nLe principe est un back office pour que la team de chez [] puisse gérer\
-toute la flotter de véhicule.\nJ'ai travaillé dessus pendant mon stage de 3ème année.\n\
+toute la flotte de véhicules.\nJ'ai travaillé dessus pendant mon stage de 3ème année.\n\
 J'ai également pus travailler sur leur site [].",
         special: [
             "React",
@@ -40,16 +40,17 @@ J'ai également pus travailler sur leur site [].",
     {
         img: "public/Area_web.png",
         text: "Projet de fin de []. Fais en [], le principe est basé sur le système d'[] avec des [], par exemple celui de github.\n\
-Connexion avec [], base de données []. Cela nous a appris à gérer des connexion [] avec les différents services.\nNous avons aussi du faire le [] en relation avec le []",
+Connexion avec [], base de données []. Cela nous a appris à gérer des connexion [] avec les différents services.\nNous avons aussi du faire le [] en [] en relation avec le []",
         special: [
             "3ème année d'Epitech",
             "React",
             "action/reaction",
+            "webhooks",
             "Firebase",
             "Firebase/Mongo",
-            "webhooks",
             "Oauth2",
             "back",
+            "NodeJs",
             "front"
         ],
         icons: [
@@ -70,8 +71,8 @@ const mobileItems = [
     {
         title: "BatFPV",
         img: "public/Bat_FPV.png",
-        text: "Projet []. Dans le monde du [] nous devons gérer nos batteries car elle ne sont pas intelligentes comme celle de nos téléphone.\n\
-C'est pour ça que j'ai pensé à une appli pour avoir nos batteries [].\nFait en [], toujours en cours de développement.\n\
+        text: "Projet []. Dans le monde du [] nous devons gérer nos batteries car elle ne sont pas intelligentes comme celles de nos téléphones.\n\
+C'est pour cela que j'ai pensé à une appli pour avoir nos batteries [].\nFait en [], toujours en cours de développement.\n\
 Connexion et base de donnée sur [].",
         special: [
             "personnel",
@@ -104,7 +105,7 @@ Connexion et base de donnée sur [].",
         title: "Freshen",
         img: "public/freshen.png",
         text: "Projet [] pour la fin d'Epitech en []. C'est une application qui vise à améliorer [] et \
-[] des [] et du monde du seconde main.\nJe travail principalement sur le back qui est fait en [], avec [] et un mode de connexion personnalisé.",
+[] des [] et du monde de la seconde main.\nJe travail principalement sur le back qui est fait en [], avec [] et un mode de connexion personnalisé.",
         special: [
             "innovation",
             "2024",
@@ -164,7 +165,7 @@ c'est plus une [] qu'un jeux car c'était notre [] en [].\nIl n'y a pas vraiment
             "démo technique",
             "premier jeux",
             "3D",
-            "ordres du narateur"
+            "ordres du narrateur"
         ],
     },
 ]
