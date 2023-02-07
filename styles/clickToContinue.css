@@ -1,0 +1,40 @@
+.click-container {
+    position: absolute;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    top: 1em;
+}
+
+.click-to-continue {
+    position: relative;
+    animation: infinite opa 1.5s;
+}
+
+.click-to-continue::after {
+    content: "";
+    width: 90%;
+    height: 40%;
+    left: 5%;
+    top: 100%;
+    position: absolute;
+    background-color: hsla(0, 0%, 30%, 0.8);
+
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+@keyframes opa {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}

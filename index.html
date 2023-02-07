@@ -1,176 +1,100 @@
-<!-- https://huemint.com/website-3/#palette=100c0f-290c18-eefbfd-32c1eb-f8bf40-ef357a -->
-<!-- Made by Thomas Cerqueira -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Thomas Cerqueira</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="public/horse.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Thomas Cerqueira</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/name.css">
+    <link rel="stylesheet" href="./styles/clickToContinue.css">
 
-    <script src="https://kit.fontawesome.com/f2f292ce78.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="stylesheet" type="text/css" href="styles/menu.css">
-    <link rel="stylesheet" type="text/css" href="styles/content.css">
-    <link rel="stylesheet" type="text/css" href="styles/caroussel.css">
-    <link rel="stylesheet" type="text/css" href="styles/about.css">
-
-    <script src="scripts/carousselBuilder.js" defer></script>
-    <script src="scripts/scrollHandler.js" defer></script>
-    <script src="scripts/carousselHandler.js" defer></script>
+    <script src="src/index.js" defer></script>
 </head>
 
 <body>
-    <nav class="menu">
-        <div class="menu-content">
-            <a href="#about" id="menu-about">
-                <i class="fa-solid fa-person"></i>
-                <div>
-                    About
-                </div>
-            </a>
-            <a href="#website" id="menu-website">
-                <i class="fa-solid fa-globe"></i>
-                <div>
-                    Website
-                </div>
-            </a>
-            <a href="#mobile" id="menu-mobile">
-                <i class="fa-solid fa-mobile"></i>
-                <div>
-                    Mobile
-                </div>
-            </a>
-            <a href="#game" id="menu-game">
-                <i class="fa-solid fa-gamepad"></i>
-                <div>
-                    Game
-                </div>
-            </a>
+    <div class="container">
+        <div class="click-container">
+            <div class="click-to-continue">
+                click to continue
+            </div>
         </div>
-    </nav>
-    <main>
-        <div class="content">
-            <section id="about" class="section section-website">
-                <div class="section-content">
-                    <h1>About</h1>
-                    <div class="about-me">
-                        <h2 class="hi">
-                            Salut, moi c'est Thomas  
-                        </h2>
-                        <p>
-                            <span>
-                                Etudiant développeur à
-                             </span>
-                             <span class="highlight">
-                                 Epitech
-                             </span>
-                             <span> en 4ème année, je suis développeur full stack et logiciel.</span>
-                             <span>En passant du </span>
-                             <span class="highlight">C++</span>
-                             <span>du</span>
-                             <span class="highlight">Python</span>
-                             <span>ou bien du</span>
-                             <span class="highlight">JavaScript</span>
-                             <span>, aucun language ne me résiste 💪 (enfin presque). N'hésitez pas à me contacter !</span>
-                            </p>
-                            <div class="icons">
-                                <i class="fa-brands fa-github fa-4x icon" onclick="window.open('https://github.com/thomascerqueira')"></i>
-                                <i class="fa-brands fa-linkedin fa-4x icon" onclick="window.open('https://www.linkedin.com/in/thomas-cerqueira/')"></i>
-                                <i class="fa-solid fa-file-contract fa-4x icon"  onclick="window.open('public/CV.pdf')"></i>
-                                <a href="mailto:thomas_cerqueira@yahoo.fr" class="icon">
-                                    <i class="fa-solid fa-envelope fa-4x"></i>
-                                </a>
-                                
-                            </div>
-                    </div>
-                    <img class="boy-img" src="public/boy_desktop.png"></img>
-                    
-                </div>
-            </section>
-            <section id="website" class="section section-website">
-                <div class="section-content">
-                    <h1>Website</h1>
-                    <div class="container">
-                        <div class="caroussel">
-                            <div class="arrow container-top">
-                                <div>
-                                    <div class="fa-solid fa-arrow-left fa-2xl a-prev"></div>
-                                </div>
-                            </div>
-                            <div class="arrow container-bottom">
-                                <div>
-                                    <div class="fa-solid fa-arrow-left fa-2xl a-next"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="mobile" class="section section-mobile">
-                <div class="section-content">
-                    <h1>Mobile</h1>
-                    <div class="container">
-                        <div class="caroussel">
-                            <div class="arrow container-top">
-                                <div>
-                                    <div class="fa-solid fa-arrow-left fa-2xl a-prev"></div>
-                                </div>
-                            </div>
-                            <div class="arrow container-bottom">
-                                <div>
-                                    <div class="fa-solid fa-arrow-left fa-2xl a-next"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="game" class="section section-game">
-                <div class="section-content">
-                    <h1>Game</h1>
-                    <div class="container">
-                        <div class="caroussel">
-                            <div class="arrow container-top">
-                                <div>
-                                    <div class="fa-solid fa-arrow-left fa-2xl a-prev"></div>
-                                </div>
-                            </div>
-                            <div class="arrow container-bottom">
-                                <div>
-                                    <div class="fa-solid fa-arrow-left fa-2xl a-next"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
 
-    <template id="template-item">
-        <div class="caroussel-item">
-            <div class="ci-img-container">
-                <img class="ci-img"></img>
+        <div class="name" id="name">
+            <div class="T" id="T">
+                <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 57.324 71.094"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
+                        stroke-width="0.25mm" fill="#000" style="stroke:#000;stroke-width:0.25mm;fill:#000">
+                        <path
+                            d="M 35.4 11.182 L 57.324 11.182 L 57.324 0 L 0 0 L 0 11.182 L 21.631 11.182 L 21.631 71.094 L 35.4 71.094 L 35.4 11.182 Z"
+                            vector-effect="non-scaling-stroke" />
+                    </g>
+                </svg>
             </div>
-            <div class="ci-text-container">
-                <h2 class="ci-title"></h2>
-                <div class="ci-span"></div>
-                <div class="ci-icon"></div>
+            <div class="H" id="H">
+                <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 47.314 71.094"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
+                        stroke-width="0.25mm" fill="#000" style="stroke:#000;stroke-width:0.25mm;fill:#000">
+                        <path
+                            d="M 33.74 71.094 L 47.314 71.094 L 47.314 0 L 33.74 0 L 33.74 29.15 L 13.623 29.15 L 13.623 0 L 0 0 L 0 71.094 L 13.623 71.094 L 13.623 40.283 L 33.74 40.283 L 33.74 71.094 Z"
+                            vector-effect="non-scaling-stroke" />
+                    </g>
+                </svg>
+            </div>
+            <div class="O" id="O">
+                <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 52.1 73.047"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
+                        stroke-width="0.25mm" fill="#000" style="stroke:#000;stroke-width:0.25mm;fill:#000">
+                        <path
+                            d="M 52.1 41.748 L 52.1 31.397 A 46.165 46.165 0 0 0 51.633 24.725 A 40.119 40.119 0 0 0 51.196 22.266 A 36.978 36.978 0 0 0 49.482 16.442 A 32.291 32.291 0 0 0 48.584 14.356 A 29.777 29.777 0 0 0 44.849 8.545 A 21.815 21.815 0 0 0 39.795 4.053 A 22.568 22.568 0 0 0 34.211 1.327 A 25.696 25.696 0 0 0 33.325 1.05 A 26.435 26.435 0 0 0 27.405 0.05 A 30.795 30.795 0 0 0 25.635 0 A 28.215 28.215 0 0 0 20.798 0.401 A 23.855 23.855 0 0 0 18.115 1.026 Q 14.649 2.051 11.865 3.955 A 23.159 23.159 0 0 0 6.86 8.643 Q 4.688 11.377 3.174 14.746 A 35.054 35.054 0 0 0 1.256 20.45 A 40.658 40.658 0 0 0 0.806 22.51 A 45.504 45.504 0 0 0 0.05 29.083 A 52.484 52.484 0 0 0 0 31.397 L 0 41.748 Q 0 46.143 0.708 50.098 A 38.342 38.342 0 0 0 1.993 55.259 A 33.109 33.109 0 0 0 2.783 57.422 A 29.134 29.134 0 0 0 5.595 62.682 A 26.269 26.269 0 0 0 6.543 63.989 Q 8.789 66.895 11.621 68.945 A 23.585 23.585 0 0 0 17.908 71.939 A 26.306 26.306 0 0 0 18.018 71.973 A 24.671 24.671 0 0 0 23.152 72.942 A 29.913 29.913 0 0 0 25.684 73.047 A 28.35 28.35 0 0 0 30.701 72.617 A 24.43 24.43 0 0 0 32.984 72.095 A 25.401 25.401 0 0 0 38.492 69.849 A 23.457 23.457 0 0 0 39.209 69.434 Q 42.334 67.481 44.776 64.551 A 30.092 30.092 0 0 0 48.877 58.106 A 35.392 35.392 0 0 0 50.871 52.24 A 40.809 40.809 0 0 0 51.27 50.464 A 42.959 42.959 0 0 0 52.065 43.594 A 49.24 49.24 0 0 0 52.1 41.748 Z M 38.184 31.299 L 38.184 41.748 A 47.146 47.146 0 0 1 37.985 46.136 A 42.449 42.449 0 0 1 37.915 46.826 A 34.422 34.422 0 0 1 37.528 49.449 A 27.589 27.589 0 0 1 37.11 51.319 A 22.119 22.119 0 0 1 36.194 54.107 A 17.964 17.964 0 0 1 35.278 56.03 A 12.423 12.423 0 0 1 33.563 58.437 A 10.836 10.836 0 0 1 32.471 59.473 Q 31.152 60.596 29.443 61.182 A 10.857 10.857 0 0 1 26.932 61.711 A 13.31 13.31 0 0 1 25.684 61.768 Q 23.535 61.768 21.851 61.133 A 9.542 9.542 0 0 1 18.848 59.326 A 10.246 10.246 0 0 1 17.409 57.643 A 13.999 13.999 0 0 1 16.382 55.884 A 18.671 18.671 0 0 1 15.138 52.591 A 22.186 22.186 0 0 1 14.795 51.172 A 27.51 27.51 0 0 1 14.299 48.475 A 33.462 33.462 0 0 1 14.111 46.729 A 60.179 60.179 0 0 1 13.921 42.552 A 67.376 67.376 0 0 1 13.916 41.748 L 13.916 31.299 A 61.534 61.534 0 0 1 14.04 27.335 A 53.785 53.785 0 0 1 14.136 26.074 A 36.573 36.573 0 0 1 14.468 23.396 A 29.269 29.269 0 0 1 14.844 21.485 A 20.761 20.761 0 0 1 15.635 18.846 A 15.864 15.864 0 0 1 16.626 16.699 A 12.405 12.405 0 0 1 18.446 14.203 A 11.002 11.002 0 0 1 19.434 13.281 Q 20.654 12.354 22.193 11.865 A 10.258 10.258 0 0 1 24.148 11.458 A 13.244 13.244 0 0 1 25.635 11.377 A 12.923 12.923 0 0 1 27.715 11.538 A 10.296 10.296 0 0 1 29.273 11.914 Q 30.908 12.451 32.227 13.428 A 11.392 11.392 0 0 1 34.302 15.598 A 14.029 14.029 0 0 1 35.108 16.821 A 18.336 18.336 0 0 1 36.499 19.787 A 22.37 22.37 0 0 1 37.061 21.533 Q 37.647 23.633 37.915 26.099 A 46.292 46.292 0 0 1 38.166 29.907 A 53.607 53.607 0 0 1 38.184 31.299 Z"
+                            vector-effect="non-scaling-stroke" />
+                    </g>
+                </svg>
+            </div>
+            <div class="M" id="M">
+                <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 48.486 71.094"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
+                        stroke-width="0.25mm" fill="#000" style="stroke:#000;stroke-width:0.25mm;fill:#000">
+                        <path
+                            d="M 23.779 26.709 L 17.041 0 L 0 0 L 0 71.094 L 12.598 71.094 L 12.598 50.049 L 12.012 18.115 L 20.361 47.656 L 27.148 47.656 L 36.475 16.797 L 35.889 50.049 L 35.889 71.094 L 48.486 71.094 L 48.486 0 L 31.445 0 L 23.779 26.709 Z"
+                            vector-effect="non-scaling-stroke" />
+                    </g>
+                </svg>
+            </div>
+            <div class="A" id="A">
+                <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 58.594 71.094"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
+                        stroke-width="0.25mm" fill="#000" style="stroke:#000;stroke-width:0.25mm;fill:#000">
+                        <path
+                            d="M 18.652 56.25 L 39.99 56.25 L 44.141 71.094 L 58.594 71.094 L 35.742 0 L 23.291 0 L 0 71.094 L 14.453 71.094 L 18.652 56.25 Z M 36.768 44.58 L 22.021 44.58 L 29.492 18.408 L 36.768 44.58 Z"
+                            vector-effect="non-scaling-stroke" />
+                    </g>
+                </svg>
+            </div>
+            <div class="S" id="S">
+                <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 52.491 72.998"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
+                        stroke-width="0.25mm" fill="#000" style="stroke:#000;stroke-width:0.25mm;fill:#000">
+                        <path
+                            d="M 13.477 50 L 0 50 A 24.172 24.172 0 0 0 0.467 54.862 A 18.274 18.274 0 0 0 2.124 59.619 Q 4.248 63.721 7.911 66.748 Q 11.768 69.824 16.968 71.411 A 35.867 35.867 0 0 0 27.491 72.998 A 39.858 39.858 0 0 0 33.634 72.542 A 32.942 32.942 0 0 0 37.5 71.704 A 25.503 25.503 0 0 0 42.262 69.855 A 20.943 20.943 0 0 0 45.411 67.871 Q 48.731 65.381 50.611 61.743 A 16.797 16.797 0 0 0 52.325 56.109 A 21.259 21.259 0 0 0 52.491 53.418 A 20.035 20.035 0 0 0 51.788 48.018 A 16.87 16.87 0 0 0 50 43.848 A 24.821 24.821 0 0 0 44.396 37.421 A 28.912 28.912 0 0 0 43.311 36.573 A 37.194 37.194 0 0 0 38.131 33.624 A 41.801 41.801 0 0 0 37.207 33.203 Q 33.887 31.739 30.225 30.713 A 66.776 66.776 0 0 1 26.984 29.749 A 49.865 49.865 0 0 1 24.097 28.711 Q 21.584 27.715 19.763 26.508 A 16.678 16.678 0 0 1 19.483 26.319 A 11.302 11.302 0 0 1 17.896 25.053 A 8.439 8.439 0 0 1 16.578 23.438 A 6.695 6.695 0 0 1 15.577 19.887 A 7.971 7.971 0 0 1 15.577 19.824 A 8.402 8.402 0 0 1 16.156 16.698 A 8.073 8.073 0 0 1 16.333 16.284 Q 17.09 14.649 18.555 13.428 A 9.743 9.743 0 0 1 20.527 12.217 A 12.722 12.722 0 0 1 22.144 11.597 A 14.177 14.177 0 0 1 24.573 11.083 A 19.417 19.417 0 0 1 27.002 10.938 A 18.667 18.667 0 0 1 29.464 11.092 Q 30.767 11.265 31.886 11.634 A 11.221 11.221 0 0 1 32.203 11.743 A 11.806 11.806 0 0 1 34.464 12.834 A 9.703 9.703 0 0 1 35.938 13.965 Q 37.403 15.43 38.16 17.432 Q 38.916 19.434 39.014 21.826 L 52.393 21.826 A 21.498 21.498 0 0 0 51.526 15.649 A 19.386 19.386 0 0 0 50.537 13.037 Q 48.682 9.033 45.362 6.104 A 23.088 23.088 0 0 0 39.653 2.497 A 27.708 27.708 0 0 0 37.427 1.612 A 28.828 28.828 0 0 0 30.715 0.166 A 35.52 35.52 0 0 0 27.246 0 A 36.507 36.507 0 0 0 20.838 0.544 A 30.92 30.92 0 0 0 17.286 1.392 A 26.679 26.679 0 0 0 12.265 3.466 A 22.315 22.315 0 0 0 9.327 5.371 A 18.675 18.675 0 0 0 4.053 11.621 Q 2.149 15.283 2.149 19.776 A 18.563 18.563 0 0 0 2.893 25.088 A 16.889 16.889 0 0 0 3.589 27.002 A 18.392 18.392 0 0 0 7.011 32.188 A 21.576 21.576 0 0 0 7.862 33.057 Q 10.508 35.612 14.584 37.784 A 43.25 43.25 0 0 0 15.161 38.086 Q 19.629 40.381 25.537 41.992 A 53.732 53.732 0 0 1 28.219 42.785 Q 29.524 43.211 30.64 43.663 A 26.729 26.729 0 0 1 31.91 44.214 A 22.491 22.491 0 0 1 33.835 45.222 Q 34.805 45.795 35.585 46.411 A 12.311 12.311 0 0 1 36.084 46.826 A 10.236 10.236 0 0 1 37.351 48.243 A 7.711 7.711 0 0 1 38.306 49.951 A 9.5 9.5 0 0 1 38.962 53.264 A 10.865 10.865 0 0 1 38.965 53.516 A 8.086 8.086 0 0 1 38.596 55.984 A 7.393 7.393 0 0 1 38.184 57.007 A 7.635 7.635 0 0 1 35.938 59.717 A 9.823 9.823 0 0 1 34.024 60.852 A 13.057 13.057 0 0 1 32.349 61.475 A 14.634 14.634 0 0 1 29.939 61.968 A 20.129 20.129 0 0 1 27.491 62.11 A 24.143 24.143 0 0 1 24.192 61.893 A 19.332 19.332 0 0 1 21.851 61.426 A 12.754 12.754 0 0 1 19.273 60.445 A 10.463 10.463 0 0 1 17.481 59.278 A 9.71 9.71 0 0 1 14.731 55.801 A 11.349 11.349 0 0 1 14.6 55.518 A 12.08 12.08 0 0 1 13.809 53.002 Q 13.526 51.618 13.477 50 Z"
+                            vector-effect="non-scaling-stroke" />
+                    </g>
+                </svg>
             </div>
         </div>
-    </template>
+    </div>
+
 </body>
 
 </html>
