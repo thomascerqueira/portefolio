@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/name.css">
     <link rel="stylesheet" href="./styles/clickToContinue.css">
+    <link rel="stylesheet" href="./styles/backButton.css">
 
 
     <script src="src/index.js" defer></script>
@@ -19,9 +20,14 @@
 
 <body>
     <div class="container">
-        <div class="click-container">
+        <div class="click-container" id="click-container">
             <div class="click-to-continue">
                 click to continue
+            </div>
+        </div>
+
+        <div class="back-button-container" id="back-button-container">
+            <div class="back-button hide" id="back-button">
             </div>
         </div>
 
@@ -49,6 +55,9 @@
                 </svg>
             </div>
             <div class="O" id="O">
+                <div class="content">
+
+                </div>
                 <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 52.1 73.047"
                     xmlns="http://www.w3.org/2000/svg">
                     <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
@@ -69,6 +78,9 @@
                             vector-effect="non-scaling-stroke" />
                     </g>
                 </svg>
+                <div class="content">
+                    es projets
+                </div>
             </div>
             <div class="A" id="A">
                 <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 58.594 71.094"
@@ -80,6 +92,10 @@
                             vector-effect="non-scaling-stroke" />
                     </g>
                 </svg>
+
+                <div class="content">
+                    Propos de moi
+                </div>
             </div>
             <div class="S" id="S">
                 <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 52.491 72.998"
