@@ -19,7 +19,7 @@
     position: relative;
 }
 
-.name > div {
+.name > div:not(.container-hover) {
     width: calc(var(--size));
 
     height: 90%;
@@ -31,6 +31,8 @@
     display: grid;
     justify-content: center;
     align-content: center;
+
+    pointer-events: none;
 }
 
 .name .content {
@@ -43,6 +45,19 @@
 
 .name svg {
     transition: all 300ms;
+}
+
+.name .container-hover {
+    position: absolute;
+    background-color: rgba(0, 0, 255, 0.4);
+
+    height: 35vh;
+    width: 100%;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    pointer-events: auto;
 }
 
 .T {}
@@ -68,15 +83,15 @@
 }
 
 .A.after {
-    left: var(--pading-after)
+    left: calc(100% - var(--pading-after) - var(--size-after));
 }
 
 .M.after {
-    left: calc(50% - var(--size-after) / 2)
+    left: calc(50% - var(--size-after) / 2);
 }
 
 .O.after {
-    left: calc(100% - var(--pading-after) - var(--size-after));
+    left: var(--pading-after);
 }
 
 .A .content,
@@ -98,7 +113,7 @@
     background-color: hsla(115, 50%, 35%, 1);
 
     border-radius: 100vh;
-    height: 50%;
+    height: 50vh;
     bottom: 25%;
 }
 
@@ -113,27 +128,31 @@
 }
 
 .name:has(.A.after:hover) .O {
-    transform: translateX(10%);
-}
-
-.name:has(.A.after:hover) .M {
-    transform: translateX(30%);
-}
-
-.name:has(.M.after:hover) .A {
-    transform: translateX(-20%);
-}
-
-.name:has(.M.after:hover) .O {
-    transform: translateX(20%);
-}
-
-.name:has(.O.after:hover) .M {
     transform: translateX(-30%);
 }
 
-.name:has(.O.after:hover) .A {
+.name:has(.A.after:hover) .M {
     transform: translateX(-10%);
+
+}
+
+.name:has(.M.after:hover) .A {
+    transform: translateX(20%);
+}
+
+.name:has(.M.after:hover) .O {
+    transform: translateX(-20%);
+}
+
+
+.name:has(.O.after:hover) .M {
+    transform: translateX(10%);
+
+}
+
+.name:has(.O.after:hover) .A {
+    transform: translateX(30%);
+
 }
 
 
@@ -158,7 +177,7 @@
         left: calc(var(--pos-mobile) * 5);
     }
 
-    .A.after {
+    .O.after {
         left: var(--padding-after-mobile)
     }
 
@@ -166,7 +185,7 @@
         left: calc(50% - var(--size-after) / 2)
     }
 
-    .O.after {
+    .A.after {
         left: calc(100% - var(--padding-after-mobile) - var(--size-after));
     }
 }
