@@ -1,0 +1,20 @@
+@import url("./index.css");
+
+.page-container {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 255, 0, 0.5);
+
+    top: -100vh;
+    transition: var(--transition-page);
+
+    z-index: 6;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.page-container.hide {
+    top: 0;
+}

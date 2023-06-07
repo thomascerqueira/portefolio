@@ -6,7 +6,7 @@
     opacity: 0;
     display: flex;
     justify-content: start;
-    z-index: 1;
+    z-index: 10;
     top: 1em;
 
     transition: all 300ms;

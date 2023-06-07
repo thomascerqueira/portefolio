@@ -3,21 +3,43 @@
     padding: 0;
     font-family: 'Roboto Mono', monospace;
 
+    --transition-duration: 650ms;
+
+    --transition-page: all var(--transition-duration) cubic-bezier(0, 0.85, 0.58, 1);
 }
 
 body {
     background-color: hsla(0, 0%, 10%, 1);
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+
+    overflow: hidden;
 }
 
 .container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
 
-    background-color: rgb(255, 0, 0.1);
-    position: relative;
-    display: flex;
+    background-color: rgba(255, 0, 0, 0.1);
 
     overflow: hidden;
+}
+
+#Home {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    transition: var(--transition-page);
+    z-index: 5;
+}
+
+#Home.up {
+    top: -100vh;
+}
+
+#Home.left {
+    left: -100vw;
 }
